@@ -1,0 +1,178 @@
+:root {
+    --color-azul-oscuro: #1e3799;
+    --color-azul-claro: #4b7bec;
+    --color-gris-oscuro: #333333;
+    --color-gris-claro: #efefef;
+    --color-blanco: #ffffff;
+
+    --transition-set: all 650ms;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+
+/*      ----------------------------        HEADER      -----------------------------*/
+header {
+    height: 6vh;
+    background-color: var(--color-gris-claro);
+    padding: 0rem 2rem;
+}
+
+header>ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header>ul>li>a {
+    gap: 2rem;
+    transition: var(--transition-set);
+}
+header>ul>li>a:hover{
+    text-decoration: underline;
+}
+
+#hamburguer_menu{
+    display: none;
+    height: 6vh;
+    width: 6vh;
+    float: left;
+    cursor: pointer;
+}
+
+
+
+/*      ----------------------------        MAIN      -----------------------------*/
+
+
+
+
+/*      ----------------------------        HERO      -----------------------------*/
+
+#hero {
+    display: flex;
+    min-height: 94vh;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 4rem;
+}
+
+/* izquierda */
+.info {
+    width: 60%;
+    min-width: 475px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* derecha */
+#hero_img {
+    width: 30%;
+    max-width: 250px;
+    min-width: 190px;
+    rotate: -28deg;
+    opacity: 0.45;
+}
+
+.info > h1{
+    font-size: 4rem;
+}
+
+.info > h1 > span {
+    color: var(--color-azul-oscuro);
+    font-weight: 700;
+}
+#hero_description{
+    font-size: 1.5rem;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 1rem;
+    gap: 30px;
+}
+.button{
+    width: 100%;
+    max-width: 18rem;
+    height: 100%;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-set);
+    font-size: 1.2rem;
+}
+
+.buttons > button:first-child {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+}
+.buttons > button:last-child {
+    background-color: var(--color-gris-claro);
+    color: var(--rtc-primary-color);
+}
+.buttons > button:first-child:hover{
+    background-color: var(--color-azul-claro);
+}
+.buttons > button:last-child:hover {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+}
+
+
+/*      ----------------------------            HERO     -->     @media          -----------------------------*/
+
+@media (max-width: 550px) {
+    .info {
+        width: 100%;
+        min-width: 0px;
+    }
+    .info > h1 {
+        font-size: 3rem;
+    }
+    #hero_description{
+        font-size: 1.2rem;
+    }
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    #hero_img {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    .info > h1 {
+        font-size: 2rem;
+    }
+    #hero_description{
+        font-size: 1rem;
+    }
+    header>ul{
+        display: none;
+    }
+    #hamburguer_menu{
+        display: block;
+    }
+}
