@@ -7,7 +7,7 @@
     --color-gris-claro: #efefef;
     --color-blanco: #ffffff;
 
-    --transition-set: all 650ms;
+    --transition-set: all 500ms;
 }
 
 * {
@@ -210,7 +210,8 @@ header>ul>li>a:hover {
 /*      ----------------------------         PROJECTS       -----------------------------*/
 
 #projects{
-    background-color: var(--color-azul-claro);
+    background: rgb(30,55,153);
+    background: linear-gradient(180deg, rgba(30,55,153,1) 0%, rgba(75,123,236,1) 98%);
     padding: 4rem 0rem;
     min-height: 110vh;
 }
@@ -263,4 +264,120 @@ header>ul>li>a:hover {
 }
 
 
+/*      ----------------------------            PROJECTS     -->     @media          -----------------------------*/
 
+
+@media (max-width: 450px) {
+    #projects > h2{
+        font-size: 2rem;
+    }
+}
+
+
+/*      ----------------------------         TECHNOLOGIES       -----------------------------*/
+
+
+#technologies{
+    min-height: 60vh;
+    padding: 4rem 0rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(239,239,239,1) 60%); 
+}
+#technologies>h2{
+    padding-left: 4rem;
+    font-size: 3.5rem;
+}
+
+#technologies-container{
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+#technologies-container>li{
+    flex-basis: 5rem;
+    flex-grow: 1;
+    max-width: 10rem;
+
+}
+
+#technologies-container>li>img{
+    max-width: 100%;
+}
+
+/*      ----------------------------            TECHNOLOGIES     -->     @media          -----------------------------*/
+
+
+@media (max-width: 930px) {
+    #technologies-container>li{
+        flex-basis: 3rem;
+        min-width: 25%;
+        max-width: 5rem;
+    }
+}
+@media (max-width: 650px) {
+    #technologies-container>li{
+        min-width: 20%;    
+    }
+    #technologies > h2{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 450px) {
+    #technologies > h2{
+        font-size: 2rem;
+    }
+}
+
+
+/*      ----------------------------         FOOTER - CONTACT       -----------------------------*/
+
+#contact{
+    min-width: 40vh;
+    background: #3b6bdc;
+    padding: 4rem;
+    display: flex;
+    gap: 4rem;
+}
+#contact>h2{
+    height: 100%;
+    color: var(--color-gris-claro);
+    font-size: 3.5rem;
+}
+#contact>h2::after{
+    content: '→';
+    padding-left: 3rem;
+}
+
+/*      ----------------------------            FOOTER - CONTACT      -->     @media          -----------------------------*/
+
+@media (max-width: 1000px) {
+    #contact>h2::after{
+        content: '';
+    }
+}
+@media (max-width: 890px) {
+    #contact{
+        flex-direction: column;
+    }
+    #contact>button{
+        align-self: center;
+    }
+}
+@media (max-width: 650px) {
+
+    #contact > h2{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 450px) {
+    #contact{
+        gap: 2rem;
+    }
+    #contact > h2{
+        font-size: 2rem;
+    }
+}
